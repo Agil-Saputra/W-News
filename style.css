@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ------------VARIABLES & ROOT-ELEMENT----------- */
 
@@ -284,7 +284,7 @@ img.close-menu.show {
 
 @media (min-width: 1300px) {
 body {
-    padding: 4rem 7rem;
+    padding: 4rem 8rem;
 }
 
 
@@ -303,7 +303,7 @@ nav {
 .navbar ul {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .navbar li {
@@ -360,7 +360,8 @@ nav {
 
 }
 .title-hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: var(--weight3);
 }
 
 
@@ -374,7 +375,7 @@ nav {
 .news-list {
     flex-direction: row;
     gap: 2rem;
-    margin: 3rem 0;
+    margin: 4rem 0;
 
 }
 
@@ -385,6 +386,29 @@ nav {
 
 
 }
+
+.news img {
+    width: 100px;
+}
+.content {
+    width: 150%;
+}
+
+.content h2 {
+    color: var(--Grayish);
+    font-size: 2rem;
+    line-height: 2rem;
+
+}
+
+.content h3 {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    font-weight: var(--weight3);
+
+}
+
+
 
 
 }
