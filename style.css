@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ------------VARIABLES & ROOT-ELEMENT----------- */
+
+:root {
+    --SoftOrange: hsl(35, 77%, 62%);
+    --Soft-Red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish: hsl(233, 8%, 79%);
+    --Dark-grayish: hsl(236, 13%, 42%);
+    --Very-dark: hsl(240, 100%, 5%);
+    --fontSize: 15px;
+    --family: inter;
+    --weight: 400;
+    --weight2: 700;
+    --weight3: 800;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--family);
+}
+
+body {
+    background-color: var(--Off-white);
+    padding: 1rem ;
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--Very-dark);
+    font-family: var(--family);
+    font-weight: var(--weight3);
+
+
+}
+
+p {
+    color: var(--Dark-grayish);
+    line-height: 1.5rem;
+    font-size: var(--fontSize);
+}
+
+
+/* -------------NAVBAR-------------- */
+
+.main {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    'one'
+    'two'
+    'three' 
+    'four'
+    ;
+}
+
+.one{grid-area: one;}
+.two{grid-area: two;}
+.three{grid-area: three;}
+.four{grid-area: four;}
+
+
+section {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Off-white);
+    align-items: center;
+
+}
+
+nav {
+    display: none;
+    transition: all 0.3s ease;
+
+
+}
+
+/* ----NAVBAR ACTIVE---- */
+
+.navbar.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--SoftOrange);
+
+
+
+}
+
+.navbar.active li {
+    list-style-type: none;
+}
+
+
+.navbar.active a {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--SoftOrange);
+    padding: 20px 0;
+    text-decoration: none;
+    color: var(--Very-dark);
+    font-weight: var(--weight2);
+
+}
+
+/* ------TOGGLE MENU------- */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+}
+
+/* OPEN-MENU */
+.open-menu {
+    background-color: none;
+    z-index: 2;
+}
+
+img.open-menu.hide {
+    display: none;
+}
+
+/* CLOSE-MENU */
+
+.close-menu {
+    display: none;
+    background-color: var(--SoftOrange);
+    z-index: 3;
+}
+
+img.close-menu.show {
+    display: flex;
+}
+
+
+/* ------------HERO-SECTION-------------- */
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+
+}
+
+/* IMAGE */
+
+.hero-img img {
+    width: 100%;
+    margin: 1rem 0;
+
+}
+
+
+/* BUTTON */
+
+.button {
+    display: flex;
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--Soft-Red);
+    color: var(--Off-white);
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    text-decoration: none;
+    font-weight: var(--weight1);
+    letter-spacing: 4px;
+    transition: 0.2s ease-in-out;
+
+}
+
+.btn:hover {
+    background-color: var(--Very-dark);
+}
+
+/* ------------NEWS-SECTION-------------- */
+
+
+.new {
+    background-color: var(--Very-dark);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 2rem 0;
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+/* TITLE */
+
+.new-h1 {
+    color: var(--SoftOrange);
+
+}
+
+/* PARAGRAF */
+.paraf {
+    color: var(--Off-white);
+    margin: 1rem 0;
+}
+
+/* -----NEWS-LIST----- */
+
+.list {
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    color: var(--Off-white);
+    margin-top: 2rem
+}
+
+.list:nth-last-child(1) {
+    border-bottom: none;
+    color: var(--Off-white);
+    margin-top: 2rem
+}
+
+/* ------------NEWS-SECTION-BOTTOM-------------- */
+
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+/* NEWS-CARD */
+
+.news {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+
+}
+
+/* IMAGE */
+
+.news img {
+    margin: 1rem 0;
+    width: 150px;
+
+}
+
+/* TEXT-CONTENT */
+
+.content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.content h2 {
+    color: var(--Grayish);
+    font-size: 2rem;
+    line-height: 2rem;
+
+}
+
+.content h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-weight: var(--weight3);
+
+}
+
+
+@media (min-width: 1300px) {
+body {
+    padding: 4rem 7rem;
+}
+
+
+ /* -------------NAVBAR-------------- */
+
+.navigation {
+    margin: 2rem 0;
+}
+
+
+nav {
+    display: flex;
+}
+
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: var(--weight);
+    color: var(--Dark-grayish);
+    transition: 0.1s ease-in-out;
+}
+
+.navbar a:hover {
+    color: var(--SoftOrange);
+}
+
+
+
+/* ------TOGGLE MENU------- */
+.menu {
+    display: none;
+}
+
+.open-menu {
+    display: none;
+}
+
+.main {
+    display: grid;
+    width: 100%;
+    gap: 1.5rem;
+    grid-template-areas: 
+    'one one four'
+    'two three four'
+    'two three four'
+    ;
+}
+
+
+/* ------------HERO-SECTION-------------- */
+ 
+
+.hero-img img {
+    margin: 0;
+    min-width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+.title-hero h1 {
+    font-size: 3rem;
+}
+
+
+.btn {
+    margin: 0;
+}
+.new {
+    margin: 0;
+}
+
+.news-list {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 3rem 0;
+
+}
+
+.news {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+
+}
+
+
+}
+
+
+@media (min-width: 900px) and (max-width: 1300px) {
+    body {
+        padding: 5rem;
+    }
+    
+    .main {
+        display: grid;
+        width: 100%;
+        gap: 1.5rem;
+        grid-template-areas: 
+        'one one four'
+        'two two four'
+        'three three four'
+        
+        ;
+    }
+    
+    .hero-img img {
+        margin: 0;
+        min-width: 100%;
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+       
+        
+    
+    }
+    .title-hero h1 {
+        font-size: 3rem;
+    }
+    
+    
+    .btn {
+        margin: 2rem 0;
+    }
+    .new {
+        margin: 0;
+    }
+    
+}
